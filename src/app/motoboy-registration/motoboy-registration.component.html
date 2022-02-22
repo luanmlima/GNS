@@ -1,0 +1,93 @@
+<div class="container">
+  <br />
+  <h1 style="text-align: center">Cadastrar Motoboy</h1>
+  <br />
+  <form [formGroup]="motoboyForm">
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input
+          matInput
+          id="name"
+          type="text"
+          formControlName="name"
+          maxlength="50"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Celular</mat-label>
+        <input
+          matInput
+          id="phoneNumber"
+          type="text"
+          formControlName="phoneNumber"
+          mask="(00) 00000-0000"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input
+          matInput
+          id="telNumber"
+          type="text"
+          formControlName="telNumber"
+          mask="(00) 0000-0000"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Idade</mat-label>
+        <input
+          matInput
+          id="age"
+          type="number"
+          formControlName="age"
+          step="1"
+          min="0"
+          max="10"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Cpf</mat-label>
+        <input
+          matInput
+          id="Cpf"
+          type="text"
+          formControlName="Cpf"
+          mask="000.000.000-00"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field class="col-md-6 offset-md-3" appearance="fill">
+        <mat-label>Cnh</mat-label>
+        <input matInput id="Cnh" type="text" formControlName="Cnh" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button
+        class="btn btn-outline-primary col-md-3 offset-md-6"
+        color="primary"
+        type="submit"
+        [disabled]="!motoboyForm.valid"
+      >
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>
+
+<p>Form Status: {{ motoboyForm.status }}</p>
