@@ -1,31 +1,28 @@
-import { MotoboyModule } from './motoboy-registration/motoboy.module';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MotoboyRegistrationComponent } from './motoboy-registration.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MotoboyRegistrationComponent } from './motoboy-registration/motoboy-registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    MotoboyRegistrationComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
     MatInputModule,
-    NgxMaskModule.forRoot(),
-    MotoboyModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    NgxMaskModule.forRoot()
+  ]
 })
-export class AppModule { }
+export class MotoboyModule { }
